@@ -27,7 +27,7 @@ class BlogService
 
     /**
      * @param array $data
-     * @return \App\Models\Blog\Blog
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model[]
      * @throws \Exception
      */
     public function create(array $data)
@@ -47,7 +47,18 @@ class BlogService
             Throw new \Exception($exception->getMessage());
         }
 
-        return true;
+//        return $blog->with(['tags']);
+        return $this->findById($blog->id);
+    }
+
+    /**
+     * @param int $id
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model[]
+     */
+    public function findById(int $id)
+    {
+        return $this->repository
+            ->findById($id);
     }
 
 }

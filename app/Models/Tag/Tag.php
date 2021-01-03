@@ -19,5 +19,4 @@ class Tag extends Model
     {
         return $this->belongsTo(Blog::class, 'blog_id', 'id');
     }
-
 }

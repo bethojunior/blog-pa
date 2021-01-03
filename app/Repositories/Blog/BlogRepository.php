@@ -7,6 +7,7 @@ namespace App\Repositories\Blog;
 use App\Contracts\Repository\AbstractRepository;
 use App\Models\Blog\Blog;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Expr\Cast\Int_;
 
 class BlogRepository extends AbstractRepository
 {
@@ -18,25 +19,15 @@ class BlogRepository extends AbstractRepository
         $this->setModel(Blog::class);
     }
 
-
     /**
-     * @param $request
-     * @return Blog
-     * @throws \Exception
+     * @param int $id
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model[]
      */
-    public function insert($request)
+    public function findById(int $id)
     {
-        try{
-            DB::beginTransaction();
-
-            DB::commit();
-
-        }catch (\Exception $exception){
-            DB::rollBack();
-            throw $exception;
-        }
-
-        return $timeline;
+        return $this->getModel()
+            ::where('id','=',$id)
+            ->with('tags')
+            ->get();
     }
-
 }

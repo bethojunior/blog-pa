@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e5807f8-e1f0-4138-beb6-05ce0a241cef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Contracts/Exception/CustomException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Contracts/Repository/AbstractRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/BlogController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Responses/ApiResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Blog/Blog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Tag/Tag.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Blog/BlogRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Tags/TagRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Blog/BlogService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Blog/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Blog/Blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Tag/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tag/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Blog/BlogRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Blog/BlogRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Blog/BlogService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Blog/BlogService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +140,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../suport" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -169,7 +164,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609706425968</updated>
-      <workItem from="1609706428389" duration="7419000" />
+      <workItem from="1609706428389" duration="9206000" />
     </task>
     <servers />
   </component>
