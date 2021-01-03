@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['prefix' => 'blog'], function () {
+    Route::group(['as' => 'blog'], function () {
+        Route::post('', 'Blog\BlogController@create');
+//        Route::get('', 'Blog\BlogController@findall');
+    });
+});
