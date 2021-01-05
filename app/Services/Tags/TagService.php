@@ -22,7 +22,7 @@ class TagService
 
     /**
      * @param string $name
-     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model[]
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
     public function findByName(string $name)
     {

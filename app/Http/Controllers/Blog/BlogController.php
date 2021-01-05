@@ -31,8 +31,13 @@ class BlogController extends Controller
     /**
      * @return \Illuminate\Http\JsonResponse
      */
-    public function list()
+    public function list(Request $request)
     {
+        $data = $request->all();
+
+        if(isset($data['tag']))
+            return $this->findByTag($data['tag']);
+
         try{
             $list = $this->service
                 ->findAll();

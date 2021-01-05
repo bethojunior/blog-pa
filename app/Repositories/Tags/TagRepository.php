@@ -19,14 +19,14 @@ class TagRepository extends AbstractRepository
 
     /**
      * @param string $name
-     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model[]
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
     public function findByName(string $name)
     {
         return $this->getModel()
             ::where('name','=',$name)
             ->with('blog')
-            ->get();
+            ->paginate(10);
     }
 
 
