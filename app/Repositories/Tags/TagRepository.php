@@ -17,4 +17,17 @@ class TagRepository extends AbstractRepository
         $this->setModel(Tag::class);
     }
 
+    /**
+     * @param string $name
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model[]
+     */
+    public function findByName(string $name)
+    {
+        return $this->getModel()
+            ::where('name','=',$name)
+            ->with('blog')
+            ->get();
+    }
+
+
 }

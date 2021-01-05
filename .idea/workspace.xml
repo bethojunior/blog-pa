@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e5807f8-e1f0-4138-beb6-05ce0a241cef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Tag/TagController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Tags/TagService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Blog/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Blog/Blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tag/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tag/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/BlogController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Blog/BlogRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Blog/BlogRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Tags/TagRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Tags/TagRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Blog/BlogService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Blog/BlogService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -140,7 +143,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../suport" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -165,6 +168,9 @@
       <option name="presentableId" value="Default" />
       <updated>1609706425968</updated>
       <workItem from="1609706428389" duration="9206000" />
+      <workItem from="1609770276043" duration="595000" />
+      <workItem from="1609779019558" duration="1402000" />
+      <workItem from="1609885036880" duration="1653000" />
     </task>
     <servers />
   </component>
@@ -181,5 +187,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

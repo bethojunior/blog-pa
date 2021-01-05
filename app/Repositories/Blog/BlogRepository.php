@@ -6,8 +6,6 @@ namespace App\Repositories\Blog;
 
 use App\Contracts\Repository\AbstractRepository;
 use App\Models\Blog\Blog;
-use Illuminate\Support\Facades\DB;
-use PhpParser\Node\Expr\Cast\Int_;
 
 class BlogRepository extends AbstractRepository
 {
@@ -29,5 +27,16 @@ class BlogRepository extends AbstractRepository
             ::where('id','=',$id)
             ->with('tags')
             ->get();
+    }
+
+    /**
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function findAll()
+    {
+        return $this->getModel()
+            ::with('tags')
+            ->orderByDesc('id')
+            ->paginate(10);
     }
 }

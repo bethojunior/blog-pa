@@ -18,9 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['prefix' => 'blog'], function () {
-    Route::group(['as' => 'blog'], function () {
+Route::group(['prefix' => 'posts'], function () {
+    Route::group(['as' => 'posts'], function () {
+        Route::get('', 'Blog\BlogController@list');
         Route::post('', 'Blog\BlogController@create');
-//        Route::get('', 'Blog\BlogController@findall');
+        Route::get('{tag}', 'Blog\BlogController@findByTag');
     });
 });

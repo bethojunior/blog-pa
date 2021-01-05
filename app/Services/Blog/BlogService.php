@@ -47,8 +47,16 @@ class BlogService
             Throw new \Exception($exception->getMessage());
         }
 
-//        return $blog->with(['tags']);
         return $this->findById($blog->id);
+    }
+
+    /**
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function findAll()
+    {
+        return $this->repository
+            ->findAll();
     }
 
     /**
