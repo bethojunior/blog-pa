@@ -87,4 +87,19 @@ class BlogController extends Controller
         return ApiResponse::success($find,'Listagem de post por tag');
     }
 
+    /**
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function destroy(int $id)
+    {
+        try{
+            $response = $this->service
+                ->delete($id);
+        }catch (\Exception $exception){
+            return ApiResponse::error('',$exception->getMessage());
+        }
+        return ApiResponse::success($response,'Post excluido com sucesso');
+    }
+
 }

@@ -22,5 +22,6 @@ Route::group(['prefix' => 'posts'], function () {
     Route::group(['as' => 'posts'], function () {
         Route::get('', 'Blog\BlogController@list');
         Route::post('', 'Blog\BlogController@create');
+        Route::delete('{id}', 'Blog\BlogController@destroy');
     });
 });

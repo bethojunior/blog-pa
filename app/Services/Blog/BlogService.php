@@ -69,4 +69,15 @@ class BlogService
             ->findById($id);
     }
 
+    /**
+     * @param $id
+     * @return bool
+     * @throws \Exception
+     */
+    public function delete($id)
+    {
+        $result = $this->repository->find($id);
+        $result->delete();
+    }
+
 }
