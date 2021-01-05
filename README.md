@@ -20,5 +20,6 @@ Copiar o arquivo .env com o seguinte comando
     Por fim 
     <br>
     <b>php artisan serve</b> 
+    <br>
     esse comando irá rodar a aplicação em um servidor local
 </p>
