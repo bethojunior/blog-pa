@@ -16,6 +16,9 @@ Copiar o arquivo .env com o seguinte comando
     <b>php artisan migrate</b>
 </p>
 <hr>
-<p>Por fim <b>php artisan serve</b> <br> esse comando irá rodar a aplicação em um servidor local</p>
-
-
+<p>
+    Por fim 
+    <br>
+    <b>php artisan serve</b> 
+    esse comando irá rodar a aplicação em um servidor local
+</p>
