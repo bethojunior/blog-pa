@@ -1,6 +1,13 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Betho Junior
+ * Date: 10/06/2020
+ * Time: 10:41
+ */
 
 namespace App\Http\Responses;
+
 
 use App\Contracts\Exception\CustomException;
 use Exception;
@@ -25,6 +32,20 @@ class ApiResponse
     }
 
     /**
+     * @param null $data
+     * @param string $message
+     * @return JsonResponse
+     */
+    public static function destroy($data = null, $message = 'Criado com sucesso')
+    {
+        return response()->json([
+            'status'    => true,
+            'response'  => $data,
+            'message'   => $message
+        ], 204);
+    }
+
+    /**
      * @param Exception|null $data
      * @param string $message
      * @param int $status
@@ -38,6 +59,7 @@ class ApiResponse
                 'status'        => false,
                 'response'      => self::mountErrorResponse($data),
                 'message'       => $data instanceof CustomException ? $data->getMessage() : $message,
+                'paramError'    => $data instanceof CustomException
             ],
                 $data instanceof CustomException ? $status : 500);
 
@@ -45,6 +67,7 @@ class ApiResponse
             'status'        => false,
             'response'      => $data,
             'message'       => $message,
+            'paramError'    => $paramError
         ], $status);
     }
 

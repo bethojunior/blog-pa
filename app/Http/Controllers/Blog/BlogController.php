@@ -69,7 +69,7 @@ class BlogController extends Controller
         }catch (\Exception $exception){
             return ApiResponse::error('',$exception->getMessage());
         }
-        return ApiResponse::success($create,'Post inserido com sucesso');
+        return ApiResponse::created($create,'Post inserido com sucesso');
     }
 
     /**
@@ -99,7 +99,7 @@ class BlogController extends Controller
         }catch (\Exception $exception){
             return ApiResponse::error('',$exception->getMessage());
         }
-        return ApiResponse::success($response,'Post excluido com sucesso');
+        return ApiResponse::destroy($response,'Post excluido com sucesso');
     }
 
 }
