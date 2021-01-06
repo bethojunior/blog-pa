@@ -87,6 +87,18 @@ class BlogController extends Controller
         return ApiResponse::success($find,'Listagem de post por tag');
     }
 
+    public function update($id, Request $request)
+    {
+        try {
+            $post = $this->service
+                ->update($id, $request->all());
+        } catch (\Exception $exception) {
+            return ApiResponse::error('',$exception->getMessage());
+        }
+
+        return ApiResponse::success($post,'Post editado com sucesso');
+    }
+
     /**
      * @param int $id
      * @return \Illuminate\Http\JsonResponse

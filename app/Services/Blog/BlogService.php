@@ -3,6 +3,7 @@
 
 namespace App\Services\Blog;
 
+use App\Exceptions\Post\PostException;
 use App\Models\Blog\Blog;
 use App\Models\Tag\Tag;
 use App\Repositories\Blog\BlogRepository;
@@ -37,17 +38,48 @@ class BlogService
             $blog->save();
 
             foreach ($data['tags'] as $tags){
-                $timeline = new Tag([
+                $tag = new Tag([
                     'name' => $tags,
                     'blog_id' => $blog->id
                 ]);
-                $timeline->save();
+                $tag->save();
             }
         }catch (\Exception $exception){
             Throw new \Exception($exception->getMessage());
         }
 
         return $this->findById($blog->id);
+    }
+
+    /**
+     * @param $id
+     * @param array $params
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model[]
+     * @throws PostException
+     */
+    public function update($id, array $params)
+    {
+        $result = $this->repository->find($id);
+
+        if (!$result)
+            throw new PostException("Post não encontrado");
+
+        foreach ($params['tags'] as $tags){
+            $tag = $this->tagRepository
+                ->deleteByBlog($id);
+        }
+
+        foreach ($params['tags'] as $tags){
+            $tag = new Tag([
+                'name' => $tags,
+                'blog_id' => $id
+            ]);
+            $tag->save();
+        }
+
+        $result->update($params);
+
+        return $this->findById($id);
     }
 
     /**

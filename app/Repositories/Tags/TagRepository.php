@@ -29,5 +29,17 @@ class TagRepository extends AbstractRepository
             ->paginate(10);
     }
 
+    /**
+     * @param int $id
+     * @return bool|mixed|null
+     * @throws \Exception
+     */
+    public function deleteByBlog(int $id)
+    {
+        return $this->getModel()
+            ::where('blog_id','=',$id)
+            ->delete();
+    }
+
 
 }
