@@ -1,0 +1,290 @@
+
+FORMAT: 1A
+HOST: https://pa.madgic.com.br
+
+# Plantão ativo
+
+
+# Group API
+
+## Sobre [/]
+
+Documentação da api para o Plantão ativo
+
+# Group Posts
+
+## Posts [/api/posts]
+
+### Inserir um post [POST]
+
++ Request Inserir um post
+
+    + Headers
+
+            Accept: application/json
+            Content-Type: application/json
+    + body
+        {
+            "title": "hotel",
+            "authot": "Jett Hilpert",
+            "content": "Local app manager. Start apps within your browser, developer tool with local .localhost domain and https out of the box.",
+            "tags":["node", "organizing", "webapps", "domain", "developer", "https", "proxy"]
+        }
+
++ Response 201  (application/json)
+    {
+        "status": true,
+        "response": [
+            {
+                "id": 1,
+                "title": "hotel",
+                "authot": "Jett Hilpert",
+                "content": "Local app manager. Start apps within your browser, developer tool with local .localhost domain and https out of the box.",
+                "created_at": "2021-01-07T00:38:54.000000Z",
+                "updated_at": "2021-01-07T00:38:54.000000Z",
+                "tags": [
+                    {
+                        "id": 1,
+                        "blog_id": 1,
+                        "name": "node",
+                        "created_at": "2021-01-07T00:38:54.000000Z",
+                        "updated_at": "2021-01-07T00:38:54.000000Z"
+                    },
+                    {
+                        "id": 2,
+                        "blog_id": 1,
+                        "name": "organizing",
+                        "created_at": "2021-01-07T00:38:54.000000Z",
+                        "updated_at": "2021-01-07T00:38:54.000000Z"
+                    },
+                    {
+                        "id": 3,
+                        "blog_id": 1,
+                        "name": "webapps",
+                        "created_at": "2021-01-07T00:38:54.000000Z",
+                        "updated_at": "2021-01-07T00:38:54.000000Z"
+                    },
+                    {
+                        "id": 4,
+                        "blog_id": 1,
+                        "name": "domain",
+                        "created_at": "2021-01-07T00:38:54.000000Z",
+                        "updated_at": "2021-01-07T00:38:54.000000Z"
+                    },
+                    {
+                        "id": 5,
+                        "blog_id": 1,
+                        "name": "developer",
+                        "created_at": "2021-01-07T00:38:54.000000Z",
+                        "updated_at": "2021-01-07T00:38:54.000000Z"
+                    },
+                    {
+                        "id": 6,
+                        "blog_id": 1,
+                        "name": "https",
+                        "created_at": "2021-01-07T00:38:54.000000Z",
+                        "updated_at": "2021-01-07T00:38:54.000000Z"
+                    },
+                    {
+                        "id": 7,
+                        "blog_id": 1,
+                        "name": "proxy",
+                        "created_at": "2021-01-07T00:38:54.000000Z",
+                        "updated_at": "2021-01-07T00:38:54.000000Z"
+                    }
+                ]
+            }
+        ],
+        "message": "Post inserido com sucesso"
+    }
+
+
+### Listar posts [GET]
+
++ Request Listar posts
+
+    + Headers
+
+            Accept: application/json
+            Content-Type: application/json
+
+
++ Response 200 (application/json)
+    + body
+    {
+        "status": true,
+        "response": {
+            "current_page": 1,
+            "data": [
+                {
+                    "id": 1,
+                    "title": "hotel",
+                    "authot": "Jett Hilpert",
+                    "content": "Local app manager. Start apps within your browser, developer tool with local .localhost domain and https out of the box.",
+                    "created_at": "2021-01-07T00:38:54.000000Z",
+                    "updated_at": "2021-01-07T00:38:54.000000Z",
+                    "tags": [
+                        {
+                            "id": 1,
+                            "blog_id": 1,
+                            "name": "node",
+                            "created_at": "2021-01-07T00:38:54.000000Z",
+                            "updated_at": "2021-01-07T00:38:54.000000Z"
+                        },
+                        {
+                            "id": 2,
+                            "blog_id": 1,
+                            "name": "organizing",
+                            "created_at": "2021-01-07T00:38:54.000000Z",
+                            "updated_at": "2021-01-07T00:38:54.000000Z"
+                        },
+                        {
+                            "id": 3,
+                            "blog_id": 1,
+                            "name": "webapps",
+                            "created_at": "2021-01-07T00:38:54.000000Z",
+                            "updated_at": "2021-01-07T00:38:54.000000Z"
+                        },
+                        {
+                            "id": 4,
+                            "blog_id": 1,
+                            "name": "domain",
+                            "created_at": "2021-01-07T00:38:54.000000Z",
+                            "updated_at": "2021-01-07T00:38:54.000000Z"
+                        },
+                        {
+                            "id": 5,
+                            "blog_id": 1,
+                            "name": "developer",
+                            "created_at": "2021-01-07T00:38:54.000000Z",
+                            "updated_at": "2021-01-07T00:38:54.000000Z"
+                        },
+                        {
+                            "id": 6,
+                            "blog_id": 1,
+                            "name": "https",
+                            "created_at": "2021-01-07T00:38:54.000000Z",
+                            "updated_at": "2021-01-07T00:38:54.000000Z"
+                        },
+                        {
+                            "id": 7,
+                            "blog_id": 1,
+                            "name": "proxy",
+                            "created_at": "2021-01-07T00:38:54.000000Z",
+                            "updated_at": "2021-01-07T00:38:54.000000Z"
+                        }
+                    ]
+                }
+            ],
+            "first_page_url": "http://127.0.0.1:8000/api/posts?page=1",
+            "from": 1,
+            "last_page": 1,
+            "last_page_url": "http://127.0.0.1:8000/api/posts?page=1",
+            "next_page_url": null,
+            "path": "http://127.0.0.1:8000/api/posts",
+            "per_page": 10,
+            "prev_page_url": null,
+            "to": 1,
+            "total": 1
+        },
+        "message": "Listagem de posts"
+    }
+
+
+### Editar um post [PUT /api/posts/1]
+
++ Request Editar um post
+    + Headers
+
+            Accept: application/json
+            Content-Type: application/json
+
++ Response 200 (application/json)
+    {
+      "status": true,
+      "response": [
+        {
+          "id": 2,
+          "title": "hotel",
+          "authot": "Jett Hilpert",
+          "content": "Local app manager. Start apps within your browser, developer tool with local .localhost domain and https out of the box.",
+          "created_at": "2021-01-06T16:50:11.000000Z",
+          "updated_at": "2021-01-06T16:50:11.000000Z",
+          "tags": [
+            {
+              "id": 18,
+              "blog_id": 2,
+              "name": "alterando 1",
+              "created_at": "2021-01-06T17:06:35.000000Z",
+              "updated_at": "2021-01-06T17:06:35.000000Z"
+            },
+            {
+              "id": 19,
+              "blog_id": 2,
+              "name": "alterando 2",
+              "created_at": "2021-01-06T17:06:35.000000Z",
+              "updated_at": "2021-01-06T17:06:35.000000Z"
+            },
+            {
+              "id": 20,
+              "blog_id": 2,
+              "name": "alterando 3",
+              "created_at": "2021-01-06T17:06:35.000000Z",
+              "updated_at": "2021-01-06T17:06:35.000000Z"
+            }
+          ]
+        }
+      ],
+      "message": "Post editado com sucesso"
+    }
+
+
+
+### Deletar um post [DELETE /api/posts/1]
+
++ Request Deletar um post
+    + Headers
+
+            Accept: application/json
+            Content-Type: application/json
+
++ Response 204 (application/json)
+    Status: 204 No Content
+
+# Data Structures
+
+## Message (object)
++ subject (string) - Assunto da mensagem
++ body (string) - Corpo da mensagem
+
+
+## MessageUpdate (Message)
++ id_message (number) - Id da mensagem
+
+## File (object)
++ id_file (number) - Id do arquivo
++ name (string) - Nome do arquivo
++ url (string) - Url do arquivo
+
+## Created (object)
++ id (number) - Id gerado
+
+## Id (object)
++ id (number) - Id a ser processado
+
+## Error (object)
++ code: 400 (number) - Status code
++ message (string) - Mensagem do status
++ description (string) - Descrição do status
+
+
+## Multi (object)
++ id (number) - Código da entidade
++ code: 200 (number) - Status code
++ message (string) - Descrição do status
+
+
+## User (object)
++ id (number) - Código do usuário
++ name (string) - Nome do usuário
++ token (string) - Token do usuário conectado

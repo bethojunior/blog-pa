@@ -25,7 +25,6 @@ class TagRepository extends AbstractRepository
     public function findByName(string $name)
     {
         return $this->getModel()
-//            ::where('name','=',$name)
             ::orWhere('name','=',$name)
             ->with([
                 'blog' => function(BelongsTo $query){
