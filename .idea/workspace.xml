@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e5807f8-e1f0-4138-beb6-05ce0a241cef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/Post/PostException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/BlogController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Tags/TagRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Tags/TagRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Blog/BlogService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Blog/BlogService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

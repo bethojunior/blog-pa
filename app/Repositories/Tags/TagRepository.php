@@ -6,6 +6,7 @@ namespace App\Repositories\Tags;
 
 use App\Contracts\Repository\AbstractRepository;
 use App\Models\Tag\Tag;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class TagRepository extends AbstractRepository
 {
@@ -24,8 +25,13 @@ class TagRepository extends AbstractRepository
     public function findByName(string $name)
     {
         return $this->getModel()
-            ::where('name','=',$name)
-            ->with('blog')
+//            ::where('name','=',$name)
+            ::orWhere('name','=',$name)
+            ->with([
+                'blog' => function(BelongsTo $query){
+                    $query->with('tags');
+                }
+            ])
             ->paginate(10);
     }
 
